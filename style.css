@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Header */
+#greeting {
+  margin: 0;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #eeeeee;
+}
+
+/* Boxes row */
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 80px;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Input + button */
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 80px;
+}
+
+#nameInput {
+  padding: 4px 6px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+}
+
+#greetBtn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#greetBtn:hover {
+  background-color: #bbb;
+}

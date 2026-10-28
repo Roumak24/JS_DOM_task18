@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Greeting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header with greeting -->
+  <h1 id="greeting">Hello</h1>
+
+  <!-- Four boxes -->
+  <div class="box-container">
+    <div class="box">Red</div>
+    <div class="box">Blue</div>
+    <div class="box">Green</div>
+    <div class="box">Yellow</div>
+  </div>
+
+  <!-- Name input and button -->
+  <div class="input-container">
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="greetBtn">Greet</button>
+  </div>
+
+  <script>
+    // Greet the user
+    const greeting = document.getElementById("greeting");
+    const nameInput = document.getElementById("nameInput");
+    const greetBtn = document.getElementById("greetBtn");
+
+    greetBtn.addEventListener("click", function () {
+      const name = nameInput.value.trim();
+      greeting.textContent = name ? "Hello, " + name : "Hello";
+    });
+
+    // Fill each box with the colour named in it when clicked
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(function (box) {
+      box.addEventListener("click", function () {
+        box.style.backgroundColor = box.textContent.trim().toLowerCase();
+        box.style.color = "#fff";
+      });
+    });
+  </script>
+
+</body>
+</html>
